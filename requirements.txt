@@ -1,0 +1,7 @@
+python==3.12.*
+sqlalchemy==2.0.36
+pydantic==2.9.2
+streamlit==1.39.0
+fastapi[standard]==0.115.4
+pydantic-settings==2.6.0
+uvicorn==0.32.0
