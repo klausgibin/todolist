@@ -1,10 +1,12 @@
+from sqlalchemy import select
 from sqlalchemy.orm import Session
-from models import TarefaModel
-from schemas import TarefaCreate, TarefaUpdate
+from backend.models import TarefaModel
+from backend.schemas import TarefaCreate, TarefaUpdate
 
 
 def create_tarefa(db: Session, tarefa: TarefaCreate):
-    db_tarefa = TarefaModel(**tarefa.model_dump())
+    #db_tarefa = TarefaModel(**tarefa.model_dump())
+    db_tarefa = TarefaModel(**tarefa.dict())
     db.add(db_tarefa)
     db.commit()
     db.refresh(db_tarefa)
@@ -13,7 +15,7 @@ def create_tarefa(db: Session, tarefa: TarefaCreate):
 
 def select_all_tarefa(db: Session,skip: int = 0, limit: int = 100):
     db_tarefa = db.scalars(select(TarefaModel).offset(skip).limit(limit)).all()
-    return {db_tarefa}
+    return db_tarefa
 
 
 def select_tarefa(db: Session, tarefa_id: int):
@@ -32,7 +34,7 @@ def delete_tarefa(db: Session, tarefa_id: int):
     db.commit()
     return {'message': 'Tarefa Deletada'}
 
-# update com ID
+
 def update_tarefa(db: Session, tarefa_id: int, tarefa: TarefaUpdate):
     db_tarefa = db.scalar(select(TarefaModel).filter_by(id=tarefa_id))
     if not db_tarefa:
@@ -53,7 +55,6 @@ def update_tarefa(db: Session, tarefa_id: int, tarefa: TarefaUpdate):
     if tarefa.data_fim is not None:
         db_tarefa.data_fim = tarefa.data_fim
 
-    db.update(db_tarefa)
     db.commit()
     db.refresh(db_tarefa)
     return db_tarefa

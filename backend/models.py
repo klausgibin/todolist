@@ -1,6 +1,6 @@
-from sqlalchemy import Column,Interger, String, DataTime
+from sqlalchemy import Column,Integer, String, Date,DateTime
 from sqlalchemy.sql import func
-from database import Base
+from backend.database import Base
 
 class TarefaModel(Base):
     __tablename__ = "tarefas"
@@ -8,8 +8,8 @@ class TarefaModel(Base):
     id = Column(Integer, primary_key=True)
     titulo = Column(String, nullable=False)
     descricao = Column(String, nullable=False)
-    data_inicio = Column(DateTime, nullable=True)
-    data_fim = Column(DateTime, nullable=True)
+    data_inicio = Column(Date, nullable=True)
+    data_fim = Column(Date, nullable=True)
     criado_em = Column(DateTime, default=func.now())
 
 
