@@ -1,7 +1,7 @@
 import streamlit as st
-from api_client import fetch_data
-from ui_components import setup_page, get_column_config, prepare_dataframe, create_data_editor
-from button_functions import handle_save_changes
+from frontend.api_client import fetch_data
+from frontend.ui_components import get_column_config, prepare_dataframe, create_data_editor
+from frontend.button_functions import handle_save_changes
 
 def main():
     st.set_page_config(layout="wide")

@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "todolist"
+version = "0.1.0"
+description = ""
+authors = ["Klaus Gibin <gibin.klaus@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "backend" },
+    { include = "frontend" },
+]
+
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+fastapi = "^0.115.4"
+uvicorn = "^0.32.0"
+streamlit = "^1.39.0"
+requests = "^2.32.3"
+sqlalchemy = "^2.0.36"
+pydantic = "^2.9.2"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

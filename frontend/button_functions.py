@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from api_client import update_task, create_task, delete_task, fetch_data
+from frontend.api_client import update_task, create_task, delete_task, fetch_data
 
 def handle_save_changes(edited_df, original_df):
     changes_made = False
