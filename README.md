@@ -60,25 +60,35 @@ _Nota: Os seguintes comandos são para ambiente Windows usando o terminal Git Ba
 
 
 ### Tecnologias Utilizadas
-<div style="display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap;">
-  <img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" width="200"/>
-  <img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" alt="Streamlit" width="200"/>
-  <img src="https://www.sqlalchemy.org/img/sqla_logo.png" alt="SQLAlchemy" width="200"/>
-  <img src="https://www.sequoiacap.com/wp-content/uploads/sites/6/2023/08/name-and-logo-path.svg" alt="Pydantic" width="200"/>
-  <img src="https://w7.pngwing.com/pngs/71/296/png-transparent-sqlite-hd-logo-thumbnail.png" alt="SQLLite" width="200"/>
 
 
-
-</div>
+<img src="https://fastapi.tiangolo.com/img/logo-margin/logo-teal.png" alt="FastAPI" width="200"/>
 
 **FastAPI:** Framework web rápido para construção de APIs com Python.
+<br><br>
+
+
+<img src="https://streamlit.io/images/brand/streamlit-logo-secondary-colormark-darktext.png" alt="Streamlit" width="200"/>
 
 **Streamlit:** Biblioteca para criação de aplicações web de dados.
+<br><br>
+
+
+<img src="https://www.sqlalchemy.org/img/sqla_logo.png" alt="SQLAlchemy" width="200"/>
 
 **SQLAlchemy:** Toolkit SQL e ORM para Python.
+<br><br>
+
+
+<img src="https://www.sequoiacap.com/wp-content/uploads/sites/6/2023/08/name-and-logo-path.svg" alt="Pydantic" width="200"/>
 
 **Pydantic:** Biblioteca para validação de dados e gerenciamento de configurações.
+<br><br>
+
+
+ <img src="https://w7.pngwing.com/pngs/71/296/png-transparent-sqlite-hd-logo-thumbnail.png" alt="SQLLite" width="200"/>
 
 **SQLite:** Sistema de gerenciamento de banco de dados relacional leve.
+<br><br>
 
-Este README fornece uma visão geral básica do projeto. Para informações mais detalhadas sobre cada componente, consulte os comentários nos respectivos arquivos de código.
+_Este README fornece uma visão geral básica do projeto. Para informações mais detalhadas sobre cada componente, consulte os comentários nos respectivos arquivos de código._
